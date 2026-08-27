@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { getDatabase, ref, get, set } from "firebase/database";
 
 /* =========================================================================
    CONFIGURA AQUÍ TU PROYECTO DE FIREBASE (gratis) PARA QUE LA APP SE
@@ -40,10 +40,10 @@ export const firebaseReady = Boolean(firebaseConfig.apiKey && firebaseConfig.api
 let db = null;
 if (firebaseReady) {
   const app = initializeApp(firebaseConfig);
-  db = getFirestore(app);
+    db = getDatabase(app);
 }
 
-const COLLECTION = "asistencia_impro";
+const ROOT = "asistencia_impro";
 
 /* Misma "forma" que la API de almacenamiento del entorno de Claude
    (window.storage), para que el resto de la app no tenga que cambiar:
