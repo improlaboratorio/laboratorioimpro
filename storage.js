@@ -25,12 +25,14 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
    de la app recordándotelo.
    ========================================================================= */
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_PROYECTO.firebaseapp.com",
-  projectId: "TU_PROYECTO",
-  storageBucket: "TU_PROYECTO.appspot.com",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID",
+  apiKey: "AIzaSyDv6IlqmUjlR7-6OghC1lFyQOSks6XLeTM",
+  authDomain: "laboratorio-impro.firebaseapp.com",
+  databaseURL: "https://laboratorio-impro-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "laboratorio-impro",
+  storageBucket: "laboratorio-impro.firebasestorage.app",
+  messagingSenderId: "361006442640",
+  appId: "1:361006442640:web:980383f7fdc37d77309015",
+  measurementId: "G-LQGPGKNEH6"
 };
 
 export const firebaseReady = Boolean(firebaseConfig.apiKey && firebaseConfig.apiKey !== "TU_API_KEY");
