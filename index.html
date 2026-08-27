@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asistencia · Laboratorio Impro</title>
+    <style>
+      /* Este ajuste tiene que estar aquí, no dentro de la app en React, porque la
+         pantalla de contraseña se pinta ANTES de que React llegue a cargar sus
+         propios estilos — sin esto, esa primera pantalla se descuadra. */
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+      body { -webkit-text-size-adjust: 100%; }
+      #root { min-height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
